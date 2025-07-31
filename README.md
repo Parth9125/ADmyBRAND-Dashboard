@@ -1,36 +1,93 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Modern SaaS Analytics Dashboard
 
-## Getting Started
+A sleek, responsive, and real-time SaaS analytics dashboard built with **Next.js 14**, **shadcn/ui**, and **Tailwind CSS**. Designed with a modern design system, interactive charts, data tables, and advanced features like real-time updates, export functionality, and theme switching.
 
-First, run the development server:
+---
+
+## ✨ Features
+
+### 📊 Dashboard
+
+- ✅ **Key Metric Cards** (Revenue, Users, Conversions, Growth %)
+- ✅ **Interactive Charts** (Line, Bar, and Donut)
+- ✅ **Data Table** with sorting, filtering, and pagination
+- ✅ **Recent Activity Feed** with avatars and icons
+- ✅ **Advanced Filters** with date range selection
+- ✅ **Real-time Updates** (simulated with intervals)
+
+### 🎨 UI/UX
+
+- ✅ Modern UI using [shadcn/ui](https://ui.shadcn.com)
+- ✅ Dark/Light Mode Toggle
+- ✅ Smooth animations and micro-interactions
+- ✅ Loading Skeletons for charts, tables, and metrics
+- ✅ Fully Responsive: Desktop, Tablet, and Mobile
+
+### ⚡ Tech Stack
+
+- **Framework**: [Next.js 14 (App Router)](https://nextjs.org)
+- **UI Kit**: [shadcn/ui](https://ui.shadcn.com)
+- **Styling**: Tailwind CSS
+- **Charts**: Recharts
+- **Data Export**: papaparse, file-saver
+
+
+---
+
+## 📦 Installation
 
 ```bash
+git clone https://github.com/Parth9125/modern-saas-dashboard.git
+cd modern-saas-dashboard
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🧪 Testing
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Tested on modern browsers
+- Responsive on desktop, tablet, and mobile
+- Real-time simulation tested with `setInterval`
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 📤 Export Functionality
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Export Data Table to **CSV**
+- Integrated with `papaparse` and `file-saver`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🌐 Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Deploy easily using [Vercel](https://vercel.com/), [Netlify](https://www.netlify.com/), or any static hosting provider:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run build
+npm start
+```
+
+---
+
+## 👨‍💻 Author
+
+**Parth Omar**  
+[GitHub](https://github.com/Parth9125) | [LinkedIn](https://www.linkedin.com/in/parth-omar-7ba086236)
+
+---
+
+## 📜 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+## 🙌 Acknowledgements
+
+- [Next.js](https://nextjs.org)
+- [shadcn/ui](https://ui.shadcn.com)
+- [Recharts](https://recharts.org)
+- [PapaParse](https://www.papaparse.com/)
+- [Tailwind CSS](https://tailwindcss.com)
