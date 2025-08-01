@@ -3,7 +3,7 @@ import { Activity } from "./RecentActivityTable";
 export const activityData: Activity[] = [
   {
     userName: "Alice Smith",
-    avatarUrl: "https://randomuser.me/api/portraits/women/1.jpg",
+    avatarUrl: "https://i.pravatar.cc/150?img=8",
     action: "Signed up for the platform",
     timestamp: "2025-07-29T09:00:00Z", 
     type: "signup",
@@ -17,7 +17,7 @@ export const activityData: Activity[] = [
   },
   {
     userName: "Charlie Green",
-    avatarUrl: "https://randomuser.me/api/portraits/men/3.jpg",
+    avatarUrl: "https://i.pravatar.cc/150?img=9",
     action: "Updated profile details",
     timestamp: "2025-07-28T17:30:00Z",
     type: "update",
