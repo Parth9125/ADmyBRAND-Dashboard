@@ -14,13 +14,18 @@ import {
 } from "@/components/ui/card";
 import { useTheme } from "next-themes";
 
+type ChartDataItem = {
+  name: string;
+  [key: string]: string | number;
+};
+
 export function ChartCard({
   title,
   data,
   dataKey,
 }: {
   title: string;
-  data: any[];
+  data: ChartDataItem[];
   dataKey: string;
 }) {
   const { theme } = useTheme();

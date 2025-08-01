@@ -1,6 +1,5 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
@@ -14,7 +13,6 @@ import autoTable from "jspdf-autotable";
 import Papa from "papaparse";
 import { activityData } from "./mockRecentActivity";
 
-// Dynamically load the dual-chart component
 const OverviewChart = dynamic(() =>
   import("./OverviewChart").then((mod) => mod.OverviewChart),
   { ssr: false }

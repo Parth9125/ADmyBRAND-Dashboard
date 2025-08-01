@@ -7,12 +7,12 @@ import * as XLSX from "xlsx";
 import jsPDF from "jspdf";
 import autoTable from "jspdf-autotable";
 
-type ExportButtonsProps = {
-  data: any[];
+type ExportButtonsProps<T> = {
+  data: T[];
   filename?: string;
 };
 
-export const ExportButtons: React.FC<ExportButtonsProps> = ({
+export const ExportButtons = <T,> ({
   data,
   filename = "export",
 }) => {
@@ -31,7 +31,6 @@ export const ExportButtons: React.FC<ExportButtonsProps> = ({
 
   const handlePDFExport = () => {
     const doc = new jsPDF();
-    const headers = Object.keys(data[0]);
     const rows = data.map((item) => Object.values(item));
     autoTable(doc, {
        head: [['Name', 'Age']],

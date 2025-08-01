@@ -12,7 +12,7 @@ import * as React from "react";
 
 interface DataTableProps<TData> {
   data: TData[];
-  columns: ColumnDef<TData, any>[];
+  columns: ColumnDef<TData, unknown>[];
 }
 
 export function DataTable<TData>({ data, columns }: DataTableProps<TData>) {

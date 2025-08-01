@@ -1,5 +1,3 @@
-// src/components/dashboard/mockData.ts
-
 import { User } from "./columns";
 
 export const tableData: User[] = [

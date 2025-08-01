@@ -12,6 +12,7 @@ import { TopMetricsCards } from "@/components/dashboard/TopMetricsCards";
 import { chartDataMap } from "@/components/dashboard/mockChartData";
 import { topProducts } from "@/components/dashboard/mockAnalyticsData";
 
+
 export default function HomePage() {
   const [selectedRange, setSelectedRange] = useState("last7days");
   const [chartData, setChartData] = useState(chartDataMap["last7days"]);

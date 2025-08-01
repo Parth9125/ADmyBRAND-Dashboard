@@ -2,11 +2,10 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { User, DollarSign, LineChart, Activity } from "lucide-react";
 
-// Metric types
 type Metric = {
   title: string;
   value: string;
@@ -41,7 +40,6 @@ const initialMetrics: Metric[] = [
   },
 ];
 
-// Animation variants
 const cardVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: (i: number) => ({
@@ -51,15 +49,12 @@ const cardVariants = {
   }),
 };
 
-// ✅ Fixed: Utility to generate random growth string
 function getRandomGrowth(base: number): string {
-  const delta = Math.random() * 5 - 2.5; // range: -2.5 to +2.5
-  const value = base + delta;
+  const delta = Math.random() * 5 - 2.5;
   const sign = delta >= 0 ? "+" : "-";
   return `${sign}${Math.abs(delta).toFixed(1)}%`;
 }
 
-// Utility: simulate dynamic metric updates
 function generateNewMetrics(): Metric[] {
   return [
     {
@@ -95,7 +90,6 @@ export const TopMetricsCards = () => {
 
   useEffect(() => {
     const loadTimer = setTimeout(() => setLoading(false), 1000);
-
     const updateInterval = setInterval(() => {
       setMetrics(generateNewMetrics());
     }, 10000);
@@ -117,7 +111,7 @@ export const TopMetricsCards = () => {
           variants={cardVariants}
         >
           <Card className="p-4 shadow-sm border dark:border-gray-700 bg-white dark:bg-gray-900 transition-all duration-300 hover:shadow-md">
-            <CardContent className="p-0 flex justify-between items-center">
+            <div className="p-0 flex justify-between items-center">
               {loading ? (
                 <div className="space-y-2 w-full">
                   <Skeleton className="h-4 w-24" />
@@ -127,7 +121,9 @@ export const TopMetricsCards = () => {
               ) : (
                 <>
                   <div>
-                    <p className="text-sm text-muted-foreground">{metric.title}</p>
+                    <p className="text-sm text-muted-foreground">
+                      {metric.title}
+                    </p>
                     <h3 className="text-2xl font-bold">{metric.value}</h3>
                     <p
                       className={`text-xs mt-1 ${
@@ -142,7 +138,7 @@ export const TopMetricsCards = () => {
                   <div>{metric.icon}</div>
                 </>
               )}
-            </CardContent>
+            </div>
           </Card>
         </motion.div>
       ))}
