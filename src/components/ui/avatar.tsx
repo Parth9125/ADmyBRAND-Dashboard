@@ -24,7 +24,7 @@ const AvatarImage = React.forwardRef<
   React.ComponentProps<typeof Image>
 >(({ className, alt = "", ...props }, ref) => (
   <Image
-    ref={ref as any}
+    ref={ref}
     alt={alt}
     fill
     className={cn("object-cover", className)}
